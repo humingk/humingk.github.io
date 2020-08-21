@@ -25,21 +25,21 @@ title : 博客导航
 - [豆瓣电影数据库设计及优化](https://humingk.github.io/mysql-douban_movie/)
 
   由于以前爬虫获取的豆瓣电影资料库数据库结构考虑不够，导致表之间出现了冗余，这里进行了一系列优化，一方面解决了冗余问题，另一方面也复习了数据库优化知识
-  
+
 - [MySQL修改默认存储路径](https://humingk.github.io/mysql-path/)
 
   mysql8.0 在ubuntu18上默认的存储路径为 /var/lib/mysql ，这里将其更换为 /home/data
 
   网上各种帖子不是少了权限就是少了AppArmor服务或socket属性，这里都包括了
-  
+
 - [MySQL 数据库设计注意事项](https://humingk.github.io/mysql-attention/)
 
   IMDB官方接口数据库是几个tsv文件合计几个G大小，导入MySQL中大概有十几个G，其中还存在冗余，这里将其转化为至少满足三范式的关系型数据库
 
--  [IMDB官方接口数据库转化为满足三范式的关系型数据库](https://humingk.github.io/mysql-imdb/)
-  
+- [IMDB官方接口数据库转化为满足三范式的关系型数据库](https://humingk.github.io/mysql-imdb/)
+
   根据《阿里巴巴Java开发手册》以及项目实践《豆瓣电影Plus数据库设计_v2.0》 ,这里总结一些关于数据库表设计相关的注意事项，特别是一些强制性的规约，我们为什么要那样做呢？
-  
+
 - [记一次误删数据库以及数据恢复 (MySQL-binlog-binlog2sql)](https://humingk.github.io/mysql-recovery_delete/)
 
   手速过快将某一个表的所有数据都删除了,这里使用[binlog2sql脚本](https://github.com/danfengcao/binlog2sql)通过[MySQL的binlog日志记录](https://dev.mysql.com/doc/refman/8.0/en/binary-log.html)来恢复数据
@@ -59,6 +59,14 @@ title : 博客导航
 - [Map容器分析 (HashMap)](https://humingk.github.io/java-container_map)
 
   Java中的Map尤其是HashMap我们经常用到，JDK1.8也给HashMap加了不少新特性，这里总结了一些常用方法，包括部分源代码的简单分析，以及HashMap的一些工作原理的实现解析
+
+
+
+以上 
+
+---
+
+
 
 ## 算法相关(Java)
 
