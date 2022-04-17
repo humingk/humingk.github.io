@@ -4,9 +4,9 @@
 baseurl:
 url: https://humingk.github.io
 date_format: "ordinal"
-title: 小明也来过的个人博客
-subtitle: "Stupid is as stupid does."
-description: "Stupid is as stupid does."
+title: 小明也来过的技术博客
+subtitle: "这个人很写，什么也没有懒"
+description: ""
 keywords: humingk
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -19,8 +19,8 @@ author: humingk
 organization: 
 organization_url: 
 github_username: humingk
-location: Chengdu, China
-email: humingk@qq.com
+location: Beijing, China
+email: humingk@gmail.com
 
 # ---------------- #
 #    Navigation    #
@@ -34,22 +34,6 @@ navs:
     href: /categories/
     label: 分类
 
-#   -
-#     href: /archives/
-#     label: 归档
-
-  -
-    href: /wiki/
-    label: 维基
-
-  -
-    href: /links/
-    label: 链接
-
-  -
-    href: /about/
-    label: 关于
-
 # ---------------- #
 #       RSS        #
 # ---------------- #
@@ -62,7 +46,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 highlighter: rouge
-paginate: 10
+paginate: 6
 lsi: false
 quiet: false
 excerpt_separator: "\n\n"
@@ -105,7 +89,7 @@ simple_jekyll_search:
     # 是否支持全文搜索
     fulltext: false
     # 最多显示多少条搜索结果
-    limit: 10
+    limit: 8
 
 # ---------------- #
 #    Analytics     #

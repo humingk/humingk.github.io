@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15}}">
+<section class="collection-head small" style="background-color:#4183c4">
     <div class="container">
         <div class="collection-title">
             <h1 class="collection-header">{{ page.title }}</h1>
@@ -22,17 +22,11 @@ layout: default
                 <article class="article-content markdown-body">
                     {{ content }}
                 </article>
-                <div class="share">
-                    {% include sns-share.html %}
-                </div>
                 <div class="comment">
                     {% include comments.html %}
                 </div>
             </div>
             <div class="column one-third">
-                {% include sidebar-search.html %}
-                {% include sidebar-qrcode.html %}
-                {% include sidebar-popular-repo.html %}
             </div>
         </div>
     </section>
