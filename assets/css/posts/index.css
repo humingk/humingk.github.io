@@ -2,6 +2,29 @@
     z-index: 999;
 }
 
+blockquote{
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #42b983;
+}
+
+.markdown-body blockquote{
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #42b983;
+}
+
+.markdown-body a {
+    color: #42b983;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.language-plaintext .highlighter-rouge{
+    color: #d63200;
+    font-weight: bold;
+}
+
 .post-directory {
     font-size: 14px;
     background: #fff;

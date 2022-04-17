@@ -4,6 +4,24 @@
     color: #fff
 }
 
+blockquote{
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #42b983;
+}
+
+.markdown-body blockquote{
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #42b983;
+}
+
+.markdown-body a {
+    color: #42b983;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .home .banner .collection-head {
     color: #fff;
     background: 0 0;
