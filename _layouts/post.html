@@ -39,6 +39,15 @@ layout: default
       {% include comments.html %}
     </div>
   </div>
+  <div style="display:none">
+    <script>
+      $(document).ready(function () {
+        $('a[href^="http"]').each(function () {
+          $(this).attr('target', '_blank');
+        });
+      });
+    </script>
+  </div>
 </div>
 </section>
 <!-- /section.content -->
