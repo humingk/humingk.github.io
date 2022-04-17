@@ -2,6 +2,10 @@
     position: relative
 }
 
+blockquote{
+    border-left: 0.25em solid #42b983;
+}
+
 .markdown-body,body {
     font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,"宋体",Helvetica,Tahoma,Arial sans-serif;
     font-size: 16px;
