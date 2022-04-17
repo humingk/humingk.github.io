@@ -38,7 +38,7 @@ comments: false
                 {% for post in paginator.posts %}
                 <li class="repo-list-item">
                     <h3 class="repo-list-name">
-                      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                      <a href="{{ site.url }}{{ post.url }}" target="_blank">{{ post.title }}</a>
                     </h3>
                     <p class="repo-list-description" style="max-width: 750px;">
                         {{ post.excerpt | strip_html | strip }}
@@ -50,7 +50,7 @@ comments: false
                         {% for cat in post.categories %}
                         <span class="meta-info" style="color: #42b983">
                           <span class="octicon octicon-file-directory"></span>
-                          <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+                          <a href="{{ site.url }}/categories/#{{ cat }}" target="_blank" title="{{ cat }}">{{ cat }}</a>
                         </span>
                         {% endfor %}
                     </p>

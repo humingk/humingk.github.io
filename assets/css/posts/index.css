@@ -3,26 +3,26 @@
 }
 
 blockquote{
-    padding: 0 1em;
-    color: #6a737d;
-    border-left: 0.25em solid #42b983;
+    padding: 0 1em !important;
+    color: #6a737d !important;
+    border-left: 0.25em solid #42b983 !important;
 }
 
 .markdown-body blockquote{
-    padding: 0 1em;
-    color: #6a737d;
-    border-left: 0.25em solid #42b983;
+    padding: 0 1em !important;
+    color: #6a737d !important;
+    border-left: 0.25em solid #42b983 !important;
 }
 
 .markdown-body a {
-    color: #42b983;
-    font-weight: bold;
-    text-decoration: none;
+    color: #42b983 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
 }
 
 .language-plaintext .highlighter-rouge{
-    color: #d63200;
-    font-weight: bold;
+    color: #d63200 !important;
+    font-weight: bold !important;
 }
 
 .post-directory {

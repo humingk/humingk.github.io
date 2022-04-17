@@ -1,29 +1,29 @@
 .home .banner,
 .home .site-header {
-    background: #4183c4;
-    color: #fff
+    background: #4183c4 !important;
+    color: #fff!important;
 }
 
 blockquote{
-    padding: 0 1em;
-    color: #6a737d;
-    border-left: 0.25em solid #42b983;
+    padding: 0 1em !important;
+    color: #6a737d !important;
+    border-left: 0.25em solid #42b983 !important;
 }
 
 .markdown-body blockquote{
-    padding: 0 1em;
-    color: #6a737d;
-    border-left: 0.25em solid #42b983;
+    padding: 0 1em !important;
+    color: #6a737d !important;
+    border-left: 0.25em solid #42b983 !important;
 }
 
 .markdown-body a {
-    color: #42b983;
-    font-weight: bold;
-    text-decoration: none;
+    color: #42b983 !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
 }
 
 .home .banner .collection-head {
-    color: #fff;
+    color: #fff ;
     background: 0 0;
     box-shadow: none;
     -webkit-box-shadow: none
