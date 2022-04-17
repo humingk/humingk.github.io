@@ -45,6 +45,11 @@
         ga('create', '{{ site.google.analytics_id }}', 'auto');
         ga('send', 'pageview');
 
+        $(document).ready(function () {
+            $('a[href^="http"]').each(function () {
+                $(this).attr('target', '_blank');
+            });
+        });
       </script>
     </div>
     {% endif %}

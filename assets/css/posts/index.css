@@ -12,6 +12,7 @@ blockquote{
     padding: 0 1em !important;
     color: #6a737d !important;
     border-left: 0.25em solid #42b983 !important;
+    background-color: #edf8f3 !important;
 }
 
 .markdown-body a {
