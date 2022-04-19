@@ -1,16 +1,10 @@
 ---
 layout: post
-title : Java常见容器类(Map)
+title : Java的Map学习笔记
 categories : java
-description : 
-keywords :
 ---
 
-
-
-
-
-Java中的Map尤其是HashMap我们经常用到，JDK1.8也给HashMap加了不少新特性，这里总结了一些常用方法，包括部分源代码的简单分析，以及HashMap的一些工作原理的实现解析
+Java中的Map尤其是HashMap我们经常用到，JDK1.8也给HashMap加了不少新特性
 
 ---
 

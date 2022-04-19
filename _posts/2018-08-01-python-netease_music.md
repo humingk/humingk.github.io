@@ -1,14 +1,12 @@
 ---
 layout: post
-title : 网易云音乐 API分析
+title : 网易云音乐API分析
 categories : python
-description : 
-keywords : python,netease, spider
 ---
 
 
 
-网易云音乐官方API有好几个，而且请求参数都用到了AES加密，我还是花了不少时间去折腾它，这里是一些简单总结，包括怎么去分析不同的API请求参数的加密过程，也比较全面的汇集了一些大佬们的精品解析贴
+网易云音乐官方API有好几个，而且请求参数都用到了AES加密，这里是一些简单总结，包括怎么去分析不同的API请求参数的加密过程，也汇集了一些解析贴
 
 ---
 

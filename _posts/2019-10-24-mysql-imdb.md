@@ -1,20 +1,12 @@
 ---
 layout: post
-title : IMDB官方接口数据库转化为满足三范式的关系型数据库
+title : IMDB官方接口数据转化为满足三范式的关系型数据库
 categories : mysql
-description : 
-keywords :
 ---
-
-
-
-
 
 IMDB官方接口数据库是几个tsv文件合计几个G大小，导入MySQL中大概有十几个G，其中还存在冗余，这里将其转化为至少满足三范式的关系型数据库
 
 ---
-
-# IMDB官方接口数据库转化为满足三范式的关系型数据库
 
 ## IMDB数据来源
 

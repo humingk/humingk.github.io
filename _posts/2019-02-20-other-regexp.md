@@ -1,12 +1,10 @@
 ---
 layout: post
 title : 正则表达式基础
-categories : algorithms
-description : 
-keywords : regexp
+categories : other
 ---
 
-正则表达式就是那种，写的时候看文档，写完之后能用，过段时间看不懂，下一次写的时候又要看文档...这里总结复习一下基础语法及常用例子，也方便快速查阅
+正则表达式的基础语法及常用例子，方便快速查阅
 
 ---
 

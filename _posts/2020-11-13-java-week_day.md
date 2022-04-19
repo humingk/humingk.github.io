@@ -2,11 +2,9 @@
 layout: post
 title : 大小写造成的悲剧——Java中的周年
 categories : java
-description : 坑
-keywords : java,datetime
 ---
 
-`yyyy-MM-dd`和`YYYY-MM-dd`的背后竟然如此不一样
+`2020年`变成了`2021年`，`yyyy-MM-dd`和`YYYY-MM-dd`的背后原来是这么回事
 
 ---
 
@@ -183,7 +181,7 @@ keywords : java,datetime
 
 ![image-20220417144917612](https://s2.loli.net/2022/04/17/Lt3oBIzvUFbeNDT.png)
 
-这是Java8文档中`yearOfEra`的官方定义：
+这是Java8文档中关于`yearOfEra`的官方定义：
 
 ```java
     /**
@@ -231,7 +229,7 @@ keywords : java,datetime
 
 ![image-20220417145919501](https://s2.loli.net/2022/04/17/MIPq2rDCwlJdUbf.png)
 
-这是Java8文档中`WeekBasedFieldPrinterParser`类的定义，可以看到**依赖了当前的语言环境**locale：
+这是Java8文档中关于`WeekBasedFieldPrinterParser`类的定义，可以看到**确实依赖了当前的语言环境**locale：
 
 ```java
     /**

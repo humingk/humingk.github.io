@@ -1,12 +1,10 @@
 ---
 layout: post
-title : 设计模式-结构型-代理
+title : 代理类学习笔记
 categories : design
-description : 笔记
-keywords : note,aop
 ---
 
-代理类提供其他类的对象，通过向外界提供功能接口以控制对这个对象的代理访问。
+代理类提供其他类的对象，通过向外界提供功能接口以控制对这个对象的代理访问
 
 ---
 

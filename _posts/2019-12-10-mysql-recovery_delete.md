@@ -1,28 +1,16 @@
 ---
 layout: post
-title : 记一次误删数据库以及数据恢复 (MySQL-binlog-binlog2sql)
+title : 误删数据库以及数据恢复
 categories : mysql
-description : 
-keywords :
 ---
 
-
-
-
-
-
-
-手速过快将某一个表的所有数据都删除了,这里使用[binlog2sql脚本](https://github.com/danfengcao/binlog2sql)通过[MySQL的binlog日志记录](https://dev.mysql.com/doc/refman/8.0/en/binary-log.html)来恢复数据
+误将某一个表的所有数据都删除了,这里使用[binlog2sql脚本](https://github.com/danfengcao/binlog2sql)通过[MySQL的binlog日志记录](https://dev.mysql.com/doc/refman/8.0/en/binary-log.html)来恢复数据
 
 ---
-
-# 记一次误删数据库以及数据恢复 (MySQL-binlog-binlog2sql)
-
-
 
 本想删除某表中的某些数据,一不小心把整个表的数据都删除掉了,六万多条数据变成了0条.
 
-刚开始有点慌,因为还没有来得及备份,难道我也要'删库跑路'了吗,但记得以前看到过能通过日志记录来恢复数据.
+刚开始有点慌,因为还没有来得及备份,但记得以前看到过能通过日志记录来恢复数据.
 
 试一试,首先看一看binlog日志记录是否正常开启,有日志记录那就不慌.
 

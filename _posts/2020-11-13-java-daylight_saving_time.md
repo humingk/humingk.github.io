@@ -2,8 +2,6 @@
 layout: post
 title : 消失了的那些天——Java中的夏令时
 categories : java
-description : 坑
-keywords : java,datetime
 ---
 
 出生于1989年4月16日的用户，竟然无法在我们的系统里下单，这是怎么一回事呢？
