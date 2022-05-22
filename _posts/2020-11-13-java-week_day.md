@@ -10,7 +10,7 @@ categories : java
 
 # 背景
 
-上次说到 [Java中的夏令时](https://humingk.github.io/java-daylight_saving_time)，其中的示例代码还有一个格式错误用法，那就是小写的`y`和大写的`Y`
+上次说到 [Java中的夏令时](https://humingk.github.io/java-daylight_saving_time)，其中的示例代码还有一个经典的格式错误用法，那就是小写的`y`和大写的`Y`
 
 
 
@@ -152,7 +152,7 @@ categories : java
           // 2020-12-27
   ```
   
-- 如果在阿拉伯国家——阿富汗，一周是从**周六**开始的，这时解析`2020-12-26`（周六）会输出`2021-12-26`
+- 如果是阿拉伯国家——阿富汗，一周是从**周六**开始的，这时解析`2020-12-26`（周六）会输出`2021-12-26`
 
   ```java
           // 2020-12-26
@@ -244,10 +244,29 @@ categories : java
 
 
 
-在解析了时间格式之后，计算年份的时候， 
+在解析了时间格式之后，计算年份的时候
 
 关键代码定位：`java.time.temporal.WeekFields.ComputedDayOfField#localizedWeekBasedYear`
 
 ![image-20220412212320193](https://s2.loli.net/2022/04/12/DdCZ6ifmrjKaTSH.png)
 
-可以看到，在计算年份的时候，如果
+可以看到，在计算年份的时候，首先计算当天在当前年的周数：
+
+- 如果是`0`，表示当天是在去年最后一周的，则`year-1`
+- 如果不是`0`，则看当前周是不是属于`跨越周`，如果属于跨越周，则`year+1`
+
+
+
+在这段代码里，有一段关键逻辑，根据参考日计算当前年的周年数
+
+`int newYearWeek = computeWeek(offset, yearLen + weekDef.getMinimalDaysInFirstWeek());`
+
+定位`java.time.temporal.WeekFields.ComputedDayOfField#computeWeek`
+
+![image-20220427125643148](https://s2.loli.net/2022/04/27/ATSIXQRHYmV6M8O.png)
+
+其中的offset表示当前day与第一个完整的周开始的那天的偏移量
+
+offset计算方式定位`java.time.temporal.WeekFields.ComputedDayOfField#startOfWeekOffset`
+
+![image-20220427130053617](https://s2.loli.net/2022/04/27/5e14uKkp6AXtlB7.png)
