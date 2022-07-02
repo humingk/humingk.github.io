@@ -1,6 +1,6 @@
 ---
 layout: post
-title : 一个缓存降级的技术实现方案
+title : 分享一个缓存降级的技术实现方案
 categories : design
 ---
 
