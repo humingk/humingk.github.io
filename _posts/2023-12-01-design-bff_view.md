@@ -1,0 +1,11 @@
+| appcode               | source         | tVal                                     | desc                |
+| --------------------- | -------------- | ---------------------------------------- | ------------------- |
+| f_athena_house_inter  | search         | f_flight_rn_inter_ota_float              | OTA浮层页           |
+| f_athena_house_inter  | booking        | f_flight_rn_inter_booking                | 填单浮层页          |
+| f_athena_house_inter  | booking_split  | f_flight_rn_inter_submit                 | 填单拆单浮层页      |
+| f_athena_house_order  | order_detail   | f_od_order_detail                        | 订单详情浮层页      |
+| f_athena_house_order  | order_card     | f_flight_orderCard_wrapper               | 行程卡片            |
+| f_athena_house_order  | flight_dynamic | f_inter_message_render                   | 航班动态/智能机器人 |
+| f_athena_house_common | refund_apply   | f_fuwu_inter_refund_applyPage            | 退款申请页          |
+| f_athena_house_common | change_apply   | f_fuwu_inter_barter_refundChangeRuleNew  | 改签申请页          |
+| f_athena_house_common | refund_process | f_fuwu_inter_refund_refundInfoForNewPage | 退款进度页          |
