@@ -16,7 +16,7 @@ categories : python
 
 weapi就是网易云音乐网页版用的API
 
-![](../img/netease/weapi.png)
+![](https://raw.githubusercontent.com/humingk/resource/master/image/2018/weapi.png)
 
 如图所示，关于某首歌的热门评论：
 
