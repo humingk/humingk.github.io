@@ -16,11 +16,11 @@ categories : java
 
 数据DIFF如下：
 
-![image-20240517153053809](https://gitee.com/humingk/image/raw/master/image/2024/05/202405171537824.png)
+![image-20240517153053809](https://raw.githubusercontent.com/humingk/resource/master/image/2024/202405171537824.png)
 
 代码如下：
 
-![image-20240517154637929](https://gitee.com/humingk/image/raw/master/image/2024/05/202405171546998.png)
+![image-20240517154637929](https://raw.githubusercontent.com/humingk/resource/master/image/2024/202405171546998.png)
 
 # 排查思路
 
@@ -51,7 +51,7 @@ protostuff竟然会忽略`@Deprecated`注解字段！
 
 > 来自 [Protostuff官方文档](https://protostuff.github.io/docs/protostuff-runtime/)：
 >
-> ![image-20240517203809817](https://gitee.com/humingk/image/raw/master/image/2024/05/202405172038943.png)
+> ![image-20240517203809817](https://raw.githubusercontent.com/humingk/resource/master/image/2024/202405172038943.png)
 
 ### Java中的deprecated注解官方解释
 

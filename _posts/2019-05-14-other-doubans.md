@@ -1,8 +1,6 @@
----
 layout: post
 title : 实现一个综合电影网站（可行性分析与实践）
 categories : other
----
 
 集合各大电影网站数据，能够让影迷们快速获取各大电影网站的电影评分信息，浏览相关电影来自豆瓣电影、知乎、网易云音乐等平台的评价与讨论，在线欣赏电影的背景音乐，甚至查询相关电影的实际拍摄地点，电影场景取景地等
 
@@ -32,7 +30,7 @@ categories : other
 
 
 
-![image-20220511125914026](https://s2.loli.net/2022/05/11/NuOXYf327vm6jVD.png)
+![image-20220511125914026](https://raw.githubusercontent.com/humingk/resource/master/image/2019/NuOXYf327vm6jVD.png)
 
 
 
@@ -92,7 +90,7 @@ categories : other
 
 
 
-![image-20220511125339686](C:/Users/mingjun.hu/AppData/Roaming/Typora/typora-user-images/image-20220511125339686.png)
+![image-20220511125339686](https://raw.githubusercontent.com/humingk/resource/master/image/2019/movie_2.0_er.png)
 
 ## 一、数据模块
 
@@ -104,7 +102,7 @@ categories : other
 
 ### 流程图
 
-![image-20220511124928273](https://s2.loli.net/2022/05/11/q5ivIW6BLUnrYT1.png)
+![image-20220511124928273](https://raw.githubusercontent.com/humingk/resource/master/image/2019/q5ivIW6BLUnrYT1.png)
 
 ### 流程图功能描述
 
@@ -156,13 +154,13 @@ categories : other
 
 
 
-![image-20220511125502770](https://s2.loli.net/2022/05/12/jIYZf6NHQa8KeEl.png)
+![image-20220511125502770](https://raw.githubusercontent.com/humingk/resource/master/image/2019/jIYZf6NHQa8KeEl.png)
 
 
 
 截止2020年，数据库维护详情
 
-![image-20220511130231552](https://s2.loli.net/2022/05/11/vfiBIjl25beOuaU.png)
+![image-20220511130231552](https://raw.githubusercontent.com/humingk/resource/master/image/2019/vfiBIjl25beOuaU.png)
 
 
 
@@ -194,13 +192,13 @@ categories : other
 
 ### 后端接口功能测试
 
-![image-20220511130702825](https://s2.loli.net/2022/05/11/lAntjRKMF7Wh95f.png)
+![image-20220511130702825](https://raw.githubusercontent.com/humingk/resource/master/image/2019/lAntjRKMF7Wh95f.png)
 
 
 
 ### 后端接口性能测试
 
-![image-20220511130745795](https://s2.loli.net/2022/05/11/vxYSUto5fqA2s9L.png)
+![image-20220511130745795](https://raw.githubusercontent.com/humingk/resource/master/image/2019/vxYSUto5fqA2s9L.png)
 
 
 
@@ -244,8 +242,7 @@ PS：后端服务器已下线，目前只展示一部电影，后端API已不可
 
 ### 电影评分雷达图
 
-![image-20220511133047444](https://s2.loli.net/2022/05/11/h47urdjebWx5PEo.png)
+![image-20220511133047444](https://raw.githubusercontent.com/humingk/resource/master/image/2019/h47urdjebWx5PEo.png)
 
 
 
-![image-20220511133114278](C:/Users/mingjun.hu/AppData/Roaming/Typora/typora-user-images/image-20220511133114278.png)

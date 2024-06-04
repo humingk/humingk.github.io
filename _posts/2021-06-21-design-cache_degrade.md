@@ -18,7 +18,7 @@ categories : design
 
 比如下图查询条件为`北京-成都-12月31日`
 
-![image-20220512130456941](https://s2.loli.net/2022/05/12/Qtmd8n5OeVSPDqh.png)
+![image-20220512130456941](https://raw.githubusercontent.com/humingk/resource/master/image/2021/Qtmd8n5OeVSPDqh.png)
 
 第二步，用户进入`航班列表页`，此页展示当天的多条航班，展示价格为每个航班的**最优报价**
 
@@ -27,7 +27,7 @@ categories : design
 - 13:30出发某个套餐（航班）的最优报价为558元
 - 06:25出发的3U6874航班的最优报价为750元
 
-![image-20220512130553366](https://s2.loli.net/2022/05/12/4zjPdM8FscpfEQh.png)
+![image-20220512130553366](https://raw.githubusercontent.com/humingk/resource/master/image/2021/4zjPdM8FscpfEQh.png)
 
 
 
@@ -37,7 +37,7 @@ categories : design
 
 比如下图只截取了一条报价，第一条报价为`xxx优选`提供的报价，价格为1062元
 
-![image-20220512131031100](https://s2.loli.net/2022/05/12/FblUz3epXMNiZ4R.png)
+![image-20220512131031100](https://raw.githubusercontent.com/humingk/resource/master/image/2021/FblUz3epXMNiZ4R.png)
 
 此处用户搜索报价流程完毕，后续进入下单流程
 
@@ -47,7 +47,7 @@ categories : design
 
 
 
-![image-20220512125649628](https://s2.loli.net/2022/05/12/X1T2JxkDPbeRoL6.png)
+![image-20220512125649628](https://raw.githubusercontent.com/humingk/resource/master/image/2021/X1T2JxkDPbeRoL6.png)
 
 我们要比较一个报价的好坏，不只是通过票面价这一个维度
 
@@ -67,7 +67,7 @@ categories : design
 
 ### 举个例子
 
-![image-20220512125536088](https://s2.loli.net/2022/05/12/a7OydqTrEWKh9jH.png)
+![image-20220512125536088](https://raw.githubusercontent.com/humingk/resource/master/image/2021/a7OydqTrEWKh9jH.png)
 
 【报价A】票面价  9元，  不支持退改，       折算价9元
 
@@ -85,7 +85,7 @@ categories : design
 
 在用户搜索报价流程完毕后，进入下单流程前，`报价详情页`由`退改签系统`提供**低QPS**的接口服务
 
-![image-20220512125748110](https://s2.loli.net/2022/05/12/Zi6VSkxoebftqdm.png)
+![image-20220512125748110](https://raw.githubusercontent.com/humingk/resource/master/image/2021/Zi6VSkxoebftqdm.png)
 
 
 
@@ -186,7 +186,7 @@ categories : design
 
 
 
-![image-20220516125726714](https://s2.loli.net/2022/05/16/zotpmuI86UyOQbN.png)
+![image-20220516125726714](https://raw.githubusercontent.com/humingk/resource/master/image/2021/zotpmuI86UyOQbN.png)
 
 
 
@@ -196,7 +196,7 @@ categories : design
 
 我们在报价系统做了一层缓存，在退改签系统做了三层缓存
 
-![image-20220516130313293](https://s2.loli.net/2022/05/22/SHWk4TgQuoCsPDx.png)
+![image-20220516130313293](https://raw.githubusercontent.com/humingk/resource/master/image/2021/SHWk4TgQuoCsPDx.png)
 
 
 
@@ -248,7 +248,7 @@ ATPCO数据源的持久化存储，我们采用`HBase`存储，在这步我们�
 
 （集群可根据QPS的实际值来动态扩缩容）
 
-![image-20220522170024075](https://s2.loli.net/2022/05/22/UkWOBQZib2VD34r.png)
+![image-20220522170024075](https://raw.githubusercontent.com/humingk/resource/master/image/2021/UkWOBQZib2VD34r.png)
 
 
 
@@ -256,7 +256,7 @@ ATPCO数据源的持久化存储，我们采用`HBase`存储，在这步我们�
 
 可以明显看到，在红圈标识的地方，QPS最高的第三个集群`报价维度搜索`集群出现了较大的波动，但此时只影响到了`报价维度搜索`集群的平均响应时间，另外两个集群没有明显的变化。
 
-![image-20220522170157699](https://s2.loli.net/2022/05/22/sr9Um723jGh5kYT.png)
+![image-20220522170157699](https://raw.githubusercontent.com/humingk/resource/master/image/2021/sr9Um723jGh5kYT.png)
 
 
 
@@ -268,7 +268,7 @@ ATPCO数据源的持久化存储，我们采用`HBase`存储，在这步我们�
 
 （图示数据的波动为新开请求量导致）
 
-![image-20220522170713424](https://s2.loli.net/2022/05/22/sZeSoXIcCmz7LbE.png)
+![image-20220522170713424](https://raw.githubusercontent.com/humingk/resource/master/image/2021/sZeSoXIcCmz7LbE.png)
 
 
 
@@ -280,7 +280,7 @@ ATPCO数据源的持久化存储，我们采用`HBase`存储，在这步我们�
 
 底层HTTP的接口有一定的QPS限制，为了保护底层HTTP接口，我们做了每个系统的入口和出口限流处理，但在请求量上涨的时候，仍有大量的请求被丢弃，无法满足上层请求接口的需要。
 
-![image-20220522170955844](https://s2.loli.net/2022/05/22/1m7ovB8xUieqFRy.png)
+![image-20220522170955844](https://raw.githubusercontent.com/humingk/resource/master/image/2021/1m7ovB8xUieqFRy.png)
 
 
 
@@ -300,7 +300,7 @@ ATPCO数据源的持久化存储，我们采用`HBase`存储，在这步我们�
 
 
 
-![image-20220522171534161](https://s2.loli.net/2022/05/22/LvS3kwlh15b9G7M.png)
+![image-20220522171534161](https://raw.githubusercontent.com/humingk/resource/master/image/2021/LvS3kwlh15b9G7M.png)
 
 
 
@@ -312,7 +312,7 @@ ATPCO数据源的持久化存储，我们采用`HBase`存储，在这步我们�
 
 这样在下一次请求到来时，我们根据这样的排行榜的分值，判断是不是“无效请求”，决定是否要过滤掉这个请求
 
-![image-20220522172314083](https://s2.loli.net/2022/05/22/AcdBV9DaWp1OLnm.png)
+![image-20220522172314083](https://raw.githubusercontent.com/humingk/resource/master/image/2021/AcdBV9DaWp1OLnm.png)
 
 
 
@@ -320,7 +320,7 @@ ATPCO数据源的持久化存储，我们采用`HBase`存储，在这步我们�
 
 Redis的有序集合通常适用于数据量较小的场景，如果我们使用它，会存在很严重的**性能问题**
 
-![image-20220522172248015](https://s2.loli.net/2022/05/22/7XkNM4Ro2YfcBKP.png)
+![image-20220522172248015](https://raw.githubusercontent.com/humingk/resource/master/image/2021/7XkNM4Ro2YfcBKP.png)
 
 
 
@@ -332,10 +332,10 @@ Redis的有序集合通常适用于数据量较小的场景，如果我们使用
 
 ### 权衡利弊的意识
 
-![image-20220522172503175](https://s2.loli.net/2022/05/22/vmaMVfHIh3jASi9.png)
+![image-20220522172503175](https://raw.githubusercontent.com/humingk/resource/master/image/2021/vmaMVfHIh3jASi9.png)
 
 
 
 ### 代码设计的必要
 
-![image-20220522172525747](https://s2.loli.net/2022/05/22/qKfzwjU9SiAQ16R.png)
+![image-20220522172525747](https://raw.githubusercontent.com/humingk/resource/master/image/2021/qKfzwjU9SiAQ16R.png)

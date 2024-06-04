@@ -187,7 +187,7 @@ final class EntrySet extends AbstractSet<Map.Entry<K,V>> {
 
 哈希数组存放每个链表的头结点
 
-![HashMap存储示意图](../img/java/map/hashmap_save.png)
+![HashMap存储示意图](https://raw.githubusercontent.com/humingk/resource/master/image/2019/hashmap_save.png)
 
 红黑树TreeNode:
 
@@ -253,7 +253,7 @@ static final int hash(Object key) {    int h;    return (key == null) ? 0 : (h =
 
    16位的hash值与数组长度（4位）进行与运算，此时hash值变成4位
 
-![hash计算流程图](../img/java/map/hash.png)
+![hash计算流程图](https://raw.githubusercontent.com/humingk/resource/master/image/2019/hash.png)
 
 ### HashMap 扩容
 
@@ -261,7 +261,7 @@ static final int hash(Object key) {    int h;    return (key == null) ? 0 : (h =
 
 - 扩容后，链表的顺序变成逆序
 
-![1.7扩容步骤](../img/java/map/resize1.7.png)
+![1.7扩容步骤](https://raw.githubusercontent.com/humingk/resource/master/image/2019/resize1.7.png)
 
 1.7扩容源代码:
 
@@ -323,19 +323,19 @@ transf
 
 此时线程二开始，put一个新值，发现 空间不够，也执行扩容操作
 
-![1](../img/java/map/resize1.7_1.png)
+![1](https://raw.githubusercontent.com/humingk/resource/master/image/2019/resize1.7_1.png)
 
 线程二完成扩容并put后，线程一继续扩容，由于e指向A，所以指向A到新table，随后更新e，e指向e.next即B，e.next指向null：
 
-![2](../img/java/map/resize1.7_2.png)
+![2](https://raw.githubusercontent.com/humingk/resource/master/image/2019/resize1.7_2.png)
 
 由于e指向B，所以指向B到新table，随后更新e,e指向e.next即null，e.next也指向null:
 
-![2](../img/java/map/resize1.7_3.png)
+![2](https://raw.githubusercontent.com/humingk/resource/master/image/2019/resize1.7_3.png)
 
 此时线程一结束，不过相当于进行了两次移动，由 1 -> A -> B ->null 变成 1 -> B -> A -> null 又变成 1 -> A -> B -> null，在第一次移动（线程二）建立了B-A的指向，在第二次移动（线程一)又建立了A-B 的指向，A与B之间出现了死锁。
 
-![2](../img/java/map/resize1.7_4.png)
+![2](https://raw.githubusercontent.com/humingk/resource/master/image/2019/resize1.7_4.png)
 
 #### JDK1.8的扩容方式
 

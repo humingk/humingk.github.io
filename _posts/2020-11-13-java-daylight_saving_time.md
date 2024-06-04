@@ -14,15 +14,15 @@ categories : java
 
 事情是这样子的，前段时间我们的系统日志里出现了这样的异常栈：
 
-![image-20220412193733827](https://s2.loli.net/2022/04/12/JucBWY4iEph6wGQ.png)
+![image-20220412193733827](https://raw.githubusercontent.com/humingk/resource/master/image/2020/JucBWY4iEph6wGQ.png)
 
 在代码里是这样用的：
 
-![image-20220412193554490](https://s2.loli.net/2022/04/12/5gkN8o7tuD4lFqh.png)
+![image-20220412193554490](https://raw.githubusercontent.com/humingk/resource/master/image/2020/5gkN8o7tuD4lFqh.png)
 
 其中，`DateUtil.dateFormatter`是这样的：
 
-![image-20220412193656061](https://s2.loli.net/2022/04/12/Or3tzym16wSDYCi.png)
+![image-20220412193656061](https://raw.githubusercontent.com/humingk/resource/master/image/2020/Or3tzym16wSDYCi.png)
 
 看到这里就困惑了，`1989-04-16`怎么就不符合`YYYY-MM-dd`格式了呢？
 
@@ -126,7 +126,7 @@ categories : java
 
 `org.joda.time.format.DateTimeParserBucket#computeMillis(boolean, java.lang.CharSequence)`
 
-![image-20220505170236704](https://s2.loli.net/2022/05/05/UGY9ytHuCaxDOXi.png)
+![image-20220505170236704](https://raw.githubusercontent.com/humingk/resource/master/image/2020/UGY9ytHuCaxDOXi.png)
 
 `unix时间戳=608688000000ms`
 
@@ -138,7 +138,7 @@ categories : java
 
 `org.joda.time.tz.CachedDateTimeZone#getOffset`
 
-![image-20220505181926122](https://s2.loli.net/2022/05/05/uGNQFdkIPn279wD.png)
+![image-20220505181926122](https://raw.githubusercontent.com/humingk/resource/master/image/2020/uGNQFdkIPn279wD.png)
 
 通过`iZone.getOffsetFromLocal`方法，返回的是`offsetAdjusted=28800000`
 
@@ -148,7 +148,7 @@ categories : java
 
 `org.joda.time.DateTimeZone#getOffsetFromLocal`
 
-![image-20220505181434379](https://s2.loli.net/2022/05/05/9lY8r5hXoAnRH6m.png)
+![image-20220505181434379](https://raw.githubusercontent.com/humingk/resource/master/image/2020/9lY8r5hXoAnRH6m.png)
 
 以上是解析`1989-94-16`的时候报错的逻辑
 
@@ -186,13 +186,13 @@ categories : java
 
 `org.joda.time.format.DateTimeParserBucket#computeMillis(boolean, java.lang.CharSequence)`
 
-![image-20220505182627459](https://s2.loli.net/2022/05/05/TnDjXZqPhfbgcIQ.png)
+![image-20220505182627459](https://raw.githubusercontent.com/humingk/resource/master/image/2020/TnDjXZqPhfbgcIQ.png)
 
 通过`getOffset`方法计算出的偏移量是`iOffset=28800000`
 
 `org.joda.time.tz.CachedDateTimeZone.Info#getOffset`
 
-![image-20220505182933271](https://s2.loli.net/2022/05/05/e2sYObkp49DWjoX.png)
+![image-20220505182933271](https://raw.githubusercontent.com/humingk/resource/master/image/2020/e2sYObkp49DWjoX.png)
 
 `iOffset=28800000`和`offsetAdjusted=28800000`这两个一致，校验成功，正常返回时间戳
 
@@ -204,11 +204,11 @@ categories : java
 
 以下是错误解析`1989-04-16 00:00:00`的`iOffset=32400000`来源
 
-![image-20220506205034563](https://s2.loli.net/2022/05/06/3opSLTDEIQ9CKRB.png)
+![image-20220506205034563](https://raw.githubusercontent.com/humingk/resource/master/image/2020/3opSLTDEIQ9CKRB.png)
 
 以下是正确解析前一天`1989-04-15 00:00:00`的`iOffset=28800000`来源
 
-![image-20220506205552360](https://s2.loli.net/2022/05/06/CznkR72wZcQE89W.png)
+![image-20220506205552360](https://raw.githubusercontent.com/humingk/resource/master/image/2020/CznkR72wZcQE89W.png)
 
 
 
@@ -276,7 +276,7 @@ categories : java
 
 
 
-![image-20220507171604788](https://s2.loli.net/2022/05/07/XpRdunbWmAoxi3r.png)
+![image-20220507171604788](https://raw.githubusercontent.com/humingk/resource/master/image/2020/XpRdunbWmAoxi3r.png)
 
 
 
@@ -294,7 +294,7 @@ categories : java
 
 而且joda的官方建议也是这样：
 
-> ![image-20220507181906777](https://s2.loli.net/2022/05/07/RmfOye4dJib6rct.png)
+> ![image-20220507181906777](https://raw.githubusercontent.com/humingk/resource/master/image/2020/RmfOye4dJib6rct.png)
 >
 > ————[What does 'Illegal instant due to time zone offset transition' mean?](http://joda-time.sourceforge.net/faq.html#illegalinstant)
 
@@ -333,7 +333,7 @@ categories : java
 
 `java.time.zone.TzdbZoneRulesProvider#TzdbZoneRulesProvider`
 
-![image-20220506211811346](https://s2.loli.net/2022/05/06/OfgNybMGp8Za6tu.png)
+![image-20220506211811346](https://raw.githubusercontent.com/humingk/resource/master/image/2020/OfgNybMGp8Za6tu.png)
 
 
 
@@ -341,7 +341,7 @@ categories : java
 
 joda用的是自己维护的一套时区数据
 
-![image-20220507173053791](https://s2.loli.net/2022/05/07/xLtAkerDZBXhg28.png)
+![image-20220507173053791](https://raw.githubusercontent.com/humingk/resource/master/image/2020/xLtAkerDZBXhg28.png)
 
 
 

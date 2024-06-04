@@ -179,7 +179,7 @@ categories : java
 
 `java.time.format.DateTimeFormatterBuilder#parseField`
 
-![image-20220417144917612](https://s2.loli.net/2022/04/17/Lt3oBIzvUFbeNDT.png)
+![image-20220417144917612](https://raw.githubusercontent.com/humingk/resource/master/image/2020/Lt3oBIzvUFbeNDT.png)
 
 这是Java8文档中关于`yearOfEra`的官方定义：
 
@@ -227,7 +227,7 @@ categories : java
 
 `java.time.format.DateTimeFormatterBuilder#parsePattern`
 
-![image-20220417145919501](https://s2.loli.net/2022/04/17/MIPq2rDCwlJdUbf.png)
+![image-20220417145919501](https://raw.githubusercontent.com/humingk/resource/master/image/2020/MIPq2rDCwlJdUbf.png)
 
 这是Java8文档中关于`WeekBasedFieldPrinterParser`类的定义，可以看到**确实依赖了当前的语言环境**locale：
 
@@ -248,7 +248,7 @@ categories : java
 
 关键代码定位：`java.time.temporal.WeekFields.ComputedDayOfField#localizedWeekBasedYear`
 
-![image-20220412212320193](https://s2.loli.net/2022/04/12/DdCZ6ifmrjKaTSH.png)
+![image-20220412212320193](https://raw.githubusercontent.com/humingk/resource/master/image/2020/DdCZ6ifmrjKaTSH.png)
 
 可以看到，在计算年份的时候，首先计算当天在当前年的周数：
 
@@ -263,10 +263,10 @@ categories : java
 
 定位`java.time.temporal.WeekFields.ComputedDayOfField#computeWeek`
 
-![image-20220427125643148](https://s2.loli.net/2022/04/27/ATSIXQRHYmV6M8O.png)
+![image-20220427125643148](https://raw.githubusercontent.com/humingk/resource/master/image/2020/ATSIXQRHYmV6M8O.png)
 
 其中的offset表示当前day与第一个完整的周开始的那天的偏移量
 
 offset计算方式定位`java.time.temporal.WeekFields.ComputedDayOfField#startOfWeekOffset`
 
-![image-20220427130053617](https://s2.loli.net/2022/04/27/5e14uKkp6AXtlB7.png)
+![image-20220427130053617](https://raw.githubusercontent.com/humingk/resource/master/image/2020/5e14uKkp6AXtlB7.png)

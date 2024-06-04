@@ -69,7 +69,7 @@ public class ProxyDemo {
 }
 ```
 
-![image-20200821104135757](../img/design/proxy/1-1.png)
+![image-20200821104135757](https://raw.githubusercontent.com/humingk/resource/master/image/2020/1-1.png)
 
 
 
@@ -349,7 +349,7 @@ public class CglibDynamicProxyDemo {
 
 我们只需要编写Mapper接口，便能运行对应的SQL语句，Mybatis通过代理实现
 
-![image-20200821153049570](../img/image-20200821153049570.png)
+![image-20200821153049570](https://raw.githubusercontent.com/humingk/resource/master/image/2020/image-20200821153049570.png)
 
 MapperProxy实现了InvocationHandler接口
 

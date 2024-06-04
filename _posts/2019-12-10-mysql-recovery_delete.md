@@ -14,21 +14,21 @@ categories : mysql
 
 试一试,首先看一看binlog日志记录是否正常开启,有日志记录那就不慌.
 
-![image-20191211180238502](../img/mysql/binlog.png)
+![image-20191211180238502](https://raw.githubusercontent.com/humingk/resource/master/image/2019/binlog.png)
 
 再看一下对应的日志记录文件中是否包含了对应的删除操作
 
-![image-20191211181138027](../img/mysql/log_87.png)
+![image-20191211181138027](https://raw.githubusercontent.com/humingk/resource/master/image/2019/log_87.png)
 
 且在对应的日志文件中,以row的形式保存了所有的已删除数据,如下图所示:
 
-<img src="../img/mysql/log_row.png" alt="image-20191211181856816" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/humingk/resource/master/image/2019/log_row.png" alt="image-20191211181856816" style="zoom:67%;" />
 
 接下来就是把这些数据重新给insert到数据库中,这里不推荐重复造轮子,推荐一个python脚本[binlog2sql](https://github.com/danfengcao/binlog2sql)
 
 最终将所有的delete数据改为insert数据
 
-![image-20191211183026627](../img/mysql/insert.png)
+![image-20191211183026627](https://raw.githubusercontent.com/humingk/resource/master/image/2019/insert.png)
 
 但这个脚本有几个小问题:
 

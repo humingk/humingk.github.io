@@ -292,21 +292,21 @@ ServiceLoader 的构造方法如下。
 
 第一次加载汇率配置类时，判断汇率配置接口的 ServersLoader 实例中`nameMapping`为空，初始化加载所有实现类。
 
-![image-20230214105502634](https://gitee.com/humingk/image/raw/master/image/2023/02/202302141055789.png)
+![image-20230214105502634](https://raw.githubusercontent.com/humingk/resource/master/image/2023/202302141055789.png)
 
 在获取汇率配置接口的默认实现类时，发现`getServiceClasses()`方法并没有加载该配置接口的所有实现类，包括默认实现类。
 
 导致抛出类加载失败异常。
 
-![image-20230112212905585](https://gitee.com/humingk/image/raw/master/image/2023/01/202301122129721.png)
+![image-20230112212905585](https://raw.githubusercontent.com/humingk/resource/master/image/2023/202301122129721.png)
 
 如下图所示，当前线程的上下文类加载器为`null`。
 
-![image-20230214194829493](https://gitee.com/humingk/image/raw/master/image/2023/02/202302141948718.png)
+![image-20230214194829493](https://raw.githubusercontent.com/humingk/resource/master/image/2023/202302141948718.png)
 
 如下图所示，当前线程的线程池为`ForkJoinPool`，其中的`contextClassLoader`为`null`。
 
-![image-20230214195159434](https://gitee.com/humingk/image/raw/master/image/2023/02/202302141951536.png)
+![image-20230214195159434](https://raw.githubusercontent.com/humingk/resource/master/image/2023/202302141951536.png)
 
 
 
